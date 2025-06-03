@@ -7,66 +7,93 @@
 <body>
 
   <header>
-    
     <h1>Pastelería Dulce Encanto</h1>
     <p>En nuestra pastelería artesanal, cada postre es preparado con dedicación,<br>
       ingredientes de calidad y un toque de cariño que se nota en cada bocado.<br>
       Nos especializamos en crear dulces únicos para celebrar tus momentos más especiales,<br>
       desde un pequeño antojo hasta grandes celebraciones. Gracias por visitarnos,<br>
       ¡te invitamos a descubrir el sabor de lo hecho con pasión!</p>
-      <a href="#">Leer más</a>
-      
+    <a href="#historia">Leer más</a>
+
     <nav>
       <a href="#menu">Menú</a> |
       <a href="#galeria">Galería</a> |
-      <a href="#contacto">Contacto</a>
+      <a href="#ofertas">Ofertas</a> |
+      <a href="#historia">Historia</a> |
+      <a href="#formulario-de-contacto">Contacto</a>
     </nav>
   </header>
 
-  <section id="menu">
-    <h2>Menú de Postres</h2>
-    <ul>
-      <li>Tarta de fresa</li>
-      <li>Cheesecake de maracuyá</li>
-      <li>Brownies de chocolate</li>
-      <li>Cupcakes</li>
-      <li>Galletas artesanales decoradas</li>
-    </ul>
-  </section>
+  <main> 
 
-  <section id="galeria">
-    <h2>Galería</h2>
-    <img src="img/imagen1.jpg" alt="Tarta de fresa" width="200">
-    <img src="img/imagen2.jpg" alt="Cheesecake de maracuyá" width="200">
-    <img src="img/imagen3.jpg" alt="Brownies" width="200">
-  </section>
+    <section id="menu">
+      <h2>Menú de Postres</h2>
+      <ul>
+        <li><strong>Tarta de fresa</strong> – S/ 12.00</li>
+        <li><strong>Cheesecake de maracuyá</strong> – S/ 14.00</li>
+        <li><strong>Brownies de chocolate</strong> – S/ 10.00</li>
+        <li><strong>Cupcakes</strong> (unidad) – S/ 6.00</li>
+        <li><strong>Galletas artesanales decoradas</strong> – S/ 3.50 c/u</li>
+      </ul>
+    </section>
 
-<section id="formulario de contacto">
-  <h2>Formulario de Contacto</h2>
+    <section id="galeria">
+      <h2>Galería</h2>
+      <img src="img/imagen1.jpg" alt="Tarta de fresa" width="200">
+      <img src="img/imagen2.jpg" alt="Cheesecake de maracuyá" width="200">
+      <img src="img/imagen3.jpg" alt="Brownies" width="200">
+    </section>
 
-  <form action="#" method="post">
+    <section id="ofertas">
+      <h2>Ofertas del Mes</h2>
+      <ul>
+        <li><strong>Combo 1:</strong> 2 brownies + 1 cupcake – S/ 20.00</li>
+        <li><strong>Combo 2:</strong> 1 cheesecake + 2 galletas decoradas – S/ 17.00</li>
+        <li><strong>Promo:</strong> 10% de descuento en pedidos por WhatsApp</li>
+      </ul>
+      <p>Más ofertas en nuestro Instagram: 
+        <a href="https://instagram.com/dulcencanto" target="_blank">@dulceencanto</a>
+      </p>
+    </section>
 
-    <div>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre"
-      name="nombre" required>
-    </div>
-<br>
-    <div>
-      <label for="email">Email:</label>
-      <input type="text" id="email"
-      name="email" required>
-    </div>
-  </form>
-</section>
+    <section id="historia">
+      <h2>Nuestra Historia</h2>
+      <p>Dulce Encanto nació en 2022 como un pequeño emprendimiento familiar en Lima. Comenzamos horneando tortas y galletas para amigos y familiares, y gracias a su apoyo fuimos creciendo.</p>
+      <p>Hoy atendemos pedidos para eventos y celebraciones especiales. Nuestro objetivo es llevar dulzura a cada momento importante con productos artesanales, preparados con amor.</p>
+      <p>¡Gracias por ser parte de nuestra historia!</p>
+      <img src="img/imagen4.jpg" alt="Nuestra primera feria" width="400">
+    </section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>WhatsApp: <a href="https://wa.me/51986252243">+51 986 252 243</a></p>
-    <p>Dirección: Av. La Marina 123, Lima - Perú</p>
-    <p>Instagram: <a href="https://instagram.com/dulcencanto" target="_blank">@dulceencanto</a></p>
+    <section id="formulario-de-contacto">
+      <h2>Formulario de Contacto</h2>
+      <form action="#" method="post">
+        <div>
+          <label for="nombre">Nombre:</label><br>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <br>
+        <div>
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <br>  
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p> WhatsApp: <a href="https://wa.me/51986252243" target="_blank">+51 986 252 243</a> <img src="img/whatsapp.png" width="25"></p>
+      <p>Dirección: Av. La Marina 123, Lima - Perú</p>
+      <p>Instagram: <a href="https://instagram.com/dulceencanto" target="_blank">@dulceencanto</a> <img src="img/insta.png" width="25"></p>
+      <p>Facebook: <a href="https://facebook.com/dulceencanto" target="_blank">Dulce Encanto</a> <img src="img/face.png" width="25"></p>
+    </section>
+
+  </main>
+
+  <footer>
     <p>&copy; 2025 Dulce Encanto. Todos los derechos reservados.</p>
+  </footer>
 
-  </section>
 </body>
 </html>
