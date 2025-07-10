@@ -27,6 +27,7 @@ a:hover {
   border-radius: 5px;
   transition: background-color 0.3s;
   margin-top: 10px;
+  text-decoration: none;
 }
 
 .boton-link:hover {
@@ -91,7 +92,10 @@ header {
 
 /* ------- Secciones generales ------- */
 main {
-  padding: 30px 20px;
+  padding: 30px 15px;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 section {
@@ -170,22 +174,122 @@ button:hover {
   background-color: #e07b8d;
 }
 
+/* ---- Estilo de las tarjetas de ofertas ---- */
+#ofertas {
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Tarjeta horizontal */
+.card {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen lateral */
+.card-img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+/* Contenido a la derecha */
+.card-content {
+  flex: 1;
+  text-align: center;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 1.4em;
+  color: #d45c74;
+}
+
+.card-content p {
+  margin: 10px 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.card-content button {
+  padding: 8px 16px;
+  background-color: #f593a2;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card-content button:hover {
+  background-color: #e07b8d;
+}
+
 /* ------- Formulario de contacto ------- */
 #suscripcion {
   background-color: #ffeef3;
   padding: 20px;
   border-radius: 10px;
-  max-width: 400px;
-  margin: 0 auto 40px;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  box-sizing: border-box;
 }
 
-#suscripcion input {
+.form-wrapper {
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#suscripcion form {
   width: 100%;
+}
+
+#suscripcion input,
+#suscripcion button {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
+}
+
+#suscripcion button {
+  background-color: #f593a2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#suscripcion button:hover {
+  background-color: #e07b8d;
 }
 
 /* ------- Testimonios ------- */
@@ -238,19 +342,57 @@ footer em {
   color: #d45c74;
 }
 
-/* ------- Responsive ------- */
+/* ------- Fuente común para títulos ------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, sans-serif !important;
+}
+
+/* ------- FIX para conflicto con Bootstrap en productos.html ------- */
+.titulo-descripcion h1 {
+  all: unset;
+  font-size: 2.5em;
+  color: #c23b55;
+  font-weight: bold;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.card-footer {
+  background-color: transparent !important;
+  border-top: none !important;
+}
+
+/* ------- Responsividad para móviles ------- */
 @media (max-width: 768px) {
+  body {
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  header, main, footer {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
   .top-header {
     flex-direction: column;
     text-align: center;
   }
 
   .logo {
-    width: 130px;
+    width: 120px;
+  }
+
+  .titulo-descripcion {
+    width: 100%;
+    text-align: center;
   }
 
   .titulo-descripcion h1 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   .barra-nav {
@@ -260,15 +402,65 @@ footer em {
     gap: 10px;
   }
 
+  /* Ajuste de productos */
   .producto {
     flex-direction: column;
     text-align: center;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 20px;
+    padding: 12px;
   }
 
   .producto img {
     width: 100%;
-    max-width: 250px;
+    max-width: 180px;
     height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Ajuste de tarjetas */
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+
+  .card-img {
+    margin: 0 auto 10px;
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+  }
+
+  .card-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-content h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+  }
+
+  .card-content p {
+    font-size: 0.95em;
+    margin-bottom: 10px;
+  }
+
+  .card-content button {
+    font-size: 0.9em;
+    padding: 6px 12px;
   }
 
   #suscripcion {
@@ -301,3 +493,4 @@ footer em {
     height: auto;
   }
 }
+
